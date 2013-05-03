@@ -49,6 +49,7 @@ int main()
 						 " c4b3a3 a3c4e4 d4C4b3 c4d4 e4 c4 a3 a3a3b3c4 d4 f4a4 g4f4e4 c4e4 d4c4b3 b3c4d4 e4 c4 a3 a3   E4e4 C4c4 D4d4 B3b3 c4 e4 A4a4 G#4g#4    ";
 	
 	Player p;
+	p.SetNoteLenght(32);
 	p.PlayLoop(pirate);
 
 	while(1);

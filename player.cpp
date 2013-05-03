@@ -102,7 +102,7 @@ void Player::PlayNoteFreq(unsigned int freq, unsigned int time)
 
 void Player::PlayNoteConstFreq(unsigned int freq)
 {
-	PlayNoteFreq(freq, NOTE_LENGHT);
+	PlayNoteFreq(freq, m_noteLenght);
 }
 
 void Player::PlayNoteStrumFreq(unsigned int freq)
