@@ -67,8 +67,9 @@ private:
 	/**
 	* Delay de un cycle machine
 	* 16000 cycle par milliseconde
+	* @param  cycles  Nombre de cycles
 	*/
-	void DelayCycles(unsigned int ms);
+	void DelayCycles(unsigned int cycles);
 
 	/**
 	* Silence
