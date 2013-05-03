@@ -20,7 +20,6 @@
 
 #include <msp430.h>
 
-#define NOTE_LENGHT 30
 #define STRUM_SILENCE 1
 
 /**
@@ -62,6 +61,8 @@ public:
 	 * @param song chanson
 	 */
 	void PlayLoop(const char* song);
+	
+	void SetNoteLenght(unsigned int l);
 
 private:
 	/**
