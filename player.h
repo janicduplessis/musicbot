@@ -126,6 +126,7 @@ private:
 private:
 	/// Tableau contenant les fréquences des notes
 	int m_notes[12];
+	unsigned int m_noteLenght;
 };
 
 #endif
