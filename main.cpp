@@ -46,7 +46,7 @@ int main()
 						 "c3 d3 f3 e3 d3 c3 D3d3 A2a2 F3f3F3f3E3e3 E3e3 D3d3 C3c3 D3d3 A2a2 C3c3 A3a3 G3g3 C4c4 E3e3E3e3C3c3 F3f3F3f3E3e3 "
 						 "E3e3 D3d3 F3F3F3f3F3f3E3e3 E3E3E3e3E3e3E3e3D3d3 D3D3D3d3 a2d3a2d3a2d3a2d3a2d3a2d3a2d3a2d3a2d3a2d3a2d3a2d3D3D3D3d3";
 	const char* tetris = "D4 b3c4d4 c4b3a3 a3c4e4 d4C4b3 c4d4 e4 c4 a3 a3a3b3c4 d4 f4a4 g4f4e4 c4e4 d4c4b3 b3c4d4 e4 c4 a3 a3  D4 b3c4d4"
-						 " c4b3a3 a3c4e4 d4C4b3 c4d4 e4 c4 a3 a3a3b3c4 d4 f4a4 g4f4e4 c4e4 d4c4b3 b3c4d4 e4 c4 a3 a3   E4e4 C4c4 D4d4 B3b3 c4 e4 A4a4 G#4g#4    "
+						 " c4b3a3 a3c4e4 d4C4b3 c4d4 e4 c4 a3 a3a3b3c4 d4 f4a4 g4f4e4 c4e4 d4c4b3 b3c4d4 e4 c4 a3 a3   E4e4 C4c4 D4d4 B3b3 c4 e4 A4a4 G#4g#4    ";
 	
 	Player p;
 	p.PlayLoop(pirate);
