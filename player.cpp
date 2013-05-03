@@ -18,7 +18,7 @@
 #include "player.h"
 
 
-Player::Player()
+Player::Player() : m_noteLenght(30)
 {
 	// Valeurs en decalage
 	// d = 2 000 000 / H
@@ -59,6 +59,11 @@ void Player::PlayLoop(const char* song)
 	while(true) {
 		PlaySong(song);
 	}
+}
+
+void Player::SetNoteLenght(unsigned int l)
+{
+	m_noteLenght = l;
 }
 
 void Player::DelayCycles(unsigned int cycles)
@@ -102,7 +107,7 @@ void Player::PlayNoteConstFreq(unsigned int freq)
 
 void Player::PlayNoteStrumFreq(unsigned int freq)
 {
-	PlayNoteFreq(freq, NOTE_LENGHT - STRUM_SILENCE);
+	PlayNoteFreq(freq, m_noteLenght - STRUM_SILENCE);
 	Silence(STRUM_SILENCE);
 }
 
@@ -245,7 +250,7 @@ void Player::PlaySong(const char* song)
 	while(*songPtr)
 	{
 		if(*songPtr == ' ') {
-			Silence(NOTE_LENGHT);
+			Silence(m_noteLenght);
 			songPtr++;
 		}
 		else if(*(songPtr + 1) == '#') {
