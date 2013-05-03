@@ -123,7 +123,7 @@ private:
 
 private:
 	/// Tableau contenant les fréquences des notes
-	int notes[12];
+	int m_notes[12];
 };
 
 #endif

@@ -23,18 +23,18 @@ Player::Player()
 	// Valeurs en decalage
 	// d = 2 000 000 / H
 	//		    d    note  valeur en hertz
-	notes[0] =	955; // C  2093
-	notes[1] =	851; // D  2349 
-	notes[2] =	758; // E  2637 
-	notes[3] =	716; // F  2793 
-	notes[4] =	637; // G  3135
-	notes[5] =	568; // A  3520 
-	notes[6] =	506; // B  3951
-	notes[7] =	902; // C# 2217
-	notes[8] =	803; // D# 2489
-	notes[9] =	675; // F# 2959
-	notes[10] = 602; // G# 3322
-	notes[11] = 536; // A# 3729
+	m_notes[0] =	955; // C  2093
+	m_notes[1] =	851; // D  2349 
+	m_notes[2] =	758; // E  2637 
+	m_notes[3] =	716; // F  2793 
+	m_notes[4] =	637; // G  3135
+	m_notes[5] =	568; // A  3520 
+	m_notes[6] =	506; // B  3951
+	m_notes[7] =	902; // C# 2217
+	m_notes[8] =	803; // D# 2489
+	m_notes[9] =	675; // F# 2959
+	m_notes[10] = 602; // G# 3322
+	m_notes[11] = 536; // A# 3729
 
 	// P1.0 est une sortie
 	P1DIR |= BIT0;
@@ -131,55 +131,55 @@ void Player::PlayNote(char note, bool isDies, int octave)
 	if(note == 'C')
 	{
 		if(isDies)
-			PlayNoteConstFreq(ApplyOctave(notes[7], octave)); //C#: 
+			PlayNoteConstFreq(ApplyOctave(m_notes[7], octave)); //C#: 
 		else
-			PlayNoteConstFreq(ApplyOctave(notes[0], octave)); //C: 
+			PlayNoteConstFreq(ApplyOctave(m_notes[0], octave)); //C: 
 	}
 	
 	//RE
 	else if(note == 'D')
 	{
 		if(isDies)
-			PlayNoteConstFreq(ApplyOctave(notes[8], octave)); //D#
+			PlayNoteConstFreq(ApplyOctave(m_notes[8], octave)); //D#
 		else
-			PlayNoteConstFreq(ApplyOctave(notes[1], octave)); //D
+			PlayNoteConstFreq(ApplyOctave(m_notes[1], octave)); //D
 	}
 	
 	//MI
 	else if(note == 'E')
 	{
-		PlayNoteConstFreq(ApplyOctave(notes[2], octave));//E
+		PlayNoteConstFreq(ApplyOctave(m_notes[2], octave));//E
 	}
 	//FA
 	else if(note == 'F')
 	{
 		if(isDies)
-			PlayNoteConstFreq(ApplyOctave(notes[9], octave));//F#
+			PlayNoteConstFreq(ApplyOctave(m_notes[9], octave));//F#
 		else
-			PlayNoteConstFreq(ApplyOctave(notes[3], octave));//F
+			PlayNoteConstFreq(ApplyOctave(m_notes[3], octave));//F
 	}
 	
 	//SOL
 	else if(note == 'G')
 	{
 		if(isDies)
-			PlayNoteConstFreq(ApplyOctave(notes[10], octave));//G#
+			PlayNoteConstFreq(ApplyOctave(m_notes[10], octave));//G#
 		else
-			PlayNoteConstFreq(ApplyOctave(notes[4], octave));//G
+			PlayNoteConstFreq(ApplyOctave(m_notes[4], octave));//G
 	}
 	
 	//LA
 	else if(note == 'A')
 	{
 		if(isDies)
-			PlayNoteConstFreq(ApplyOctave(notes[11], octave));//A#
+			PlayNoteConstFreq(ApplyOctave(m_notes[11], octave));//A#
 		else
-			PlayNoteConstFreq(ApplyOctave(notes[5], octave));//A
+			PlayNoteConstFreq(ApplyOctave(m_notes[5], octave));//A
 	}
 	//SI
 	else if(note == 'B')
 	{
-		PlayNoteConstFreq(ApplyOctave(notes[6], octave));//B
+		PlayNoteConstFreq(ApplyOctave(m_notes[6], octave));//B
 	}
 	
 	// Strum notes
@@ -187,55 +187,55 @@ void Player::PlayNote(char note, bool isDies, int octave)
 	else if(note == 'c')
 	{
 		if(isDies)
-			PlayNoteStrumFreq(ApplyOctave(notes[7], octave)); //C#: 
+			PlayNoteStrumFreq(ApplyOctave(m_notes[7], octave)); //C#: 
 		else
-			PlayNoteStrumFreq(ApplyOctave(notes[0], octave)); //C: 
+			PlayNoteStrumFreq(ApplyOctave(m_notes[0], octave)); //C: 
 	}
 	
 	//RE
 	else if(note == 'd')
 	{
 		if(isDies)
-			PlayNoteStrumFreq(ApplyOctave(notes[8], octave)); //D#
+			PlayNoteStrumFreq(ApplyOctave(m_notes[8], octave)); //D#
 		else 
-			PlayNoteStrumFreq(ApplyOctave(notes[1], octave)); //D
+			PlayNoteStrumFreq(ApplyOctave(m_notes[1], octave)); //D
 	}
 
 	//MI
 	else if(note == 'e')
 	{
-		PlayNoteStrumFreq(ApplyOctave(notes[2], octave));//E
+		PlayNoteStrumFreq(ApplyOctave(m_notes[2], octave));//E
 	}
 	//FA
 	else if(note == 'f')
 	{
 		if(isDies)
-			PlayNoteStrumFreq(ApplyOctave(notes[9], octave));//F#
+			PlayNoteStrumFreq(ApplyOctave(m_notes[9], octave));//F#
 		else
-			PlayNoteStrumFreq(ApplyOctave(notes[3], octave));//F
+			PlayNoteStrumFreq(ApplyOctave(m_notes[3], octave));//F
 	}
 	
 	//SOL
 	else if(note == 'g')
 	{
 		if(isDies)
-			PlayNoteStrumFreq(ApplyOctave(notes[10], octave));//G#
+			PlayNoteStrumFreq(ApplyOctave(m_notes[10], octave));//G#
 		else
-			PlayNoteStrumFreq(ApplyOctave(notes[4], octave));//G
+			PlayNoteStrumFreq(ApplyOctave(m_notes[4], octave));//G
 	}
 	
 	//LA
 	else if(note == 'a')
 	{
 		if(isDies)
-			PlayNoteStrumFreq(ApplyOctave(notes[11], octave));//A#
+			PlayNoteStrumFreq(ApplyOctave(m_notes[11], octave));//A#
 		else
-			PlayNoteStrumFreq(ApplyOctave(notes[5], octave));//A
+			PlayNoteStrumFreq(ApplyOctave(m_notes[5], octave));//A
 	}
 	//SI
 	else if(note == 'b')
 	{
-		PlayNoteStrumFreq(ApplyOctave(notes[6], octave));//B
+		PlayNoteStrumFreq(ApplyOctave(m_notes[6], octave));//B
 	}
 }
 
