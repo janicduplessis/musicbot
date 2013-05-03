@@ -61,9 +61,9 @@ void Player::PlayLoop(const char* song)
 	}
 }
 
-void Player::DelayCycles(unsigned int ms)
+void Player::DelayCycles(unsigned int cycles)
 {
-	while(ms--)
+	while(cycles--)
 		__delay_cycles(1);
 		
 }
